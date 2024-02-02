@@ -49,7 +49,8 @@ export default {
         if (res.data.status === 200) {
           localStorage.getItem("auth_t");
           localStorage.removeItem("auth_t");
-          this.$router.push({ name: "login" });
+          // this.$router.push({ name: "Login" });
+          window.location.reload();
         }
       });
     },

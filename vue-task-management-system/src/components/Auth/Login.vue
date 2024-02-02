@@ -31,7 +31,6 @@ export default {
           if (res.data.status == 200) {
             this.isLoading = true;
             localStorage.setItem("auth_t", res.data.token);
-            this.$toast.success(res.data.errors.email);
             this.$router.push({ name: "createTask" });
           } else if (res.data.status == 401) {
             alert("User not found");
